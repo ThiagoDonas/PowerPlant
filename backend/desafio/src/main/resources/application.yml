@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://db:5432/powerplant_db
+    username: admin
+    password: secret
+    hikari:
+      connectionTimeout: 30000
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+      connection:
+        charSet: UTF-8
+        characterEncoding: UTF-8
+        useUnicode: true
+    show-sql: true
+  jackson:
+    default-property-inclusion: non_null
